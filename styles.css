@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	color:white;
+    height: 1500px;
+    width:60%;
+    background-color: Gray;
+}
+</style>
+</head>
+<body>
+
+<div class="Box" style="width:700px">
+
+<div class="head" style="background-color:#8B0000;">
+	<h1 style="margin:0;font:30px papyrus;text-align:center;">Ken's Resume</h1>
+</div>
+
+<div id="left-menu" style="background-color:#FFD700;
+height:1500px;width:200px;float:left;font:20px papyrus">
+<ul>
+   <li><style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+</style>
+   <img scr="Ken photo.jpg" alt=" Ken Lin's photo" width="100" height="300"></li>
+   <li>Experiences</li>
+   <li>Skills</li>
+  </ul>
+</div>
+
+<div id="text" style="background-color:#000000;height:1500px;width:390px;
+float:left;font:15px papyrus">
+<ul style="list-style-type:circle;">
+  <li>Program Development （currant）
+Fairfax,Virginia
+<div>
+•	Cooperate with IT R&D team to develope an App in order to improve life style.
+•	Negotiate with IT R&D team to establish the mission and goals
+•	Market research and prediction
+•	Target users and develop business plan
+•	Participate in exhibitions and rising capital
+</li>
+  <li>China Everbright Bank             （July 2016 – August 2016）                       Henan, China
+<div>
+•	Training including social etiquettes, basic workflow, and represent product capabilities
+•	Assisted in launching such products as the Henan Province E-Z pass system
+•	Conducted market research and customer analysis
+•	Presented well-documented progress reports to customers and manager in written or oral reports
+</li>
+  <li>NOVA Chinese Students and scholars Association (CSSA)      （August 2016- June 2017）      Annandale,Virginia
+<div>
+•	Co- led with President of CSSA on Annandale campus.
+•	As a treasurer, procure materials, prepare budget, negotiate with SGA, and apply for funds from school
+•	Host the Chinese New Year Celebration.
+•	Intrduce Chinese culture to all students and solve problems for students including selecting courses, choosing major, and legal advice
+
+	</li>
+
+
+</ul>
+</div>
+
+<div id="right-bar" style="background-color:#b9e356;
+height:1500px;width:110px;
+float:left;font:15px verdana">
+ professional goals
+ <ul>
+  <li>Data analysis</li>
+   <li>User experience designer</li>
+  </ul>
+</div>
+
+</body>

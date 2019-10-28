@@ -17,9 +17,45 @@
   </div>
   <script>
     function loadData() {
-      fetch('ajax_sample.json')
+      var randNum = getRandomIntInclusive(0, 24);
+      fetch('https://api.umd.io/v0/bus/routes')
         .then(res => res.json())
-        .then(data => document.querySelector(".content").innerText = data);
+        .then(res=>{
+          console.log(res);
+          // document.querySelector(".header").innerText = "UMD Bus Routes " + res[randNum]["title"];
+          return res;
+        })
+        // .then(res => res)
+        .then(res => 
+        {
+          document.querySelector(".content").innerHTML = "";
+          // console.log("HELP", res[0]["title"]);
+          for (item of res)
+          {
+            let el = document.createElement("li");
+            el.innerText = item["title"];
+            document.querySelector('.content').appendChild(el);
+            item["title"].split(item["route_id"]).length > 1 ? item["title"] = item["title"].split(item["route_id"])[1] : item["title"] =  item["title"].split(item["route_id"])[0];
+            console.log(item["title"]);
+          }
+          return res;
+        })
+        .then(res =>{
+          var selected = res.find(function(e)
+          {
+            return e["route_id"] == "132";
+          });
+          document.querySelector(".header").innerText = "UMD Bus Routes " +selected["route_id"] + " " + selected["title"];
+          console.log(selected);
+        })
+        
+    }
+
+    function getRandomIntInclusive(min, max) 
+    {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; 
     }
   </script>
 </body>

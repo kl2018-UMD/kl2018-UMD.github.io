@@ -17,7 +17,7 @@
   </div>
   <script>
     function loadData() {
-      var randNum = getRandomIntInclusive(0, 61);
+      var randNum = getRandomIntInclusive(0, 68);
       fetch('https://api.umd.io/v0/courses/list')
         .then(res => res.json())
         .then(res=>{
@@ -34,39 +34,15 @@
               el.innerText = res[i]["course_id"] + ": " + res[i]["name"];
               console.log(res[i]["course_id"])
               document.querySelector('.content').appendChild(el);
-          
-              // if (dept_id == "INST")
-            
-              // res[i]["title"].split(item["course_id"]).length > 1 ? item["title"] = item["title"].split(item["course_id"])[1] : item["title"] =  item["title"].split(item["course_id"])[0];
-              // console.log(item["title"]);
             };  
           }
           return res;
         })
         .then(res => 
         {
-          document.querySelector(".content").innerHTML = "";
-          // for (item of res)
-          // {
-          //   let el = document.createElement("li");
-          //   el.innerText = item["title"];
-          //   document.querySelector('.content').appendChild(el);
-          //   // if (dept_id == "INST")
-           
-          //   item["title"].split(item["course_id"]).length > 1 ? item["title"] = item["title"].split(item["course_id"])[1] : item["title"] =  item["title"].split(item["course_id"])[0];
-          //   console.log(item["title"]);
-          // }
           console.log(res);
           return res;
         })
-        // .then(res =>{
-        //   var selected = res.find(function(e)
-        //   {
-        //     return e["course_id"] == "62";
-        //   });
-        //   document.querySelector(".header").innerText = "UMD INST courses " +selected["course_id"] + " " + selected["title"];
-        //   console.log(selected);
-        // })
         
     }
 
